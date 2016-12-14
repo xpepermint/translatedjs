@@ -1,0 +1,46 @@
+{
+  "name": "translated",
+  "version": "0.0.1",
+  "description": "Internationalization (i18n) and localization (l10n) library",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpepermint/translatedjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xpepermint/translatedjs/issues"
+  },
+  "homepage": "https://github.com/xpepermint/translatedjs#readme",
+  "keywords": [
+    "i18n",
+    "l10n",
+    "cldr",
+    "translate",
+    "translation",
+    "translated",
+    "locale",
+    "localize",
+    "localized",
+    "localization",
+    "international",
+    "internationalize",
+    "internationalization",
+    "internationalized",
+    "lang",
+    "language",
+    "parse",
+    "format",
+    "plural",
+    "number",
+    "date",
+    "currency",
+    "relative date",
+    "globalize",
+    "globalized"
+  ],
+  "author": "Kristijan Sedlak (Xpepermint)",
+  "license": "MIT"
+}
