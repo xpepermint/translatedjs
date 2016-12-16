@@ -92,13 +92,13 @@ Note that a `format` option is also supported and can be set to `short`, `medium
 i18n.formatDate(Date.now(), {format: 'short'}); // -> 12/16/16
 ```
 
-**I18n.prototype.formatMessage(message, vars)**
+**I18n.prototype.formatMessage(key, vars)**
 
 > Compiles ICU message into string.
 
 | Name | Type | Required | Default | Description
 |------|------|----------|---------|------------
-| message | String | Yes | - | ICU message (supports `number`, `date`, `plural`, and `select`).
+| key | String | Yes | - | ICU message (supports `number`, `date`, `plural`, and `select`).
 | vars | Object | No | - | Data object.
 
 You can use a `plural` argument to select sub-messages based on a numeric value, together with the plural rules for the specified language.
