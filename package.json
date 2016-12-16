@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "ava": "^0.17.0",
-    "icu4c-data": "^0.57.2",
+    "icu4c-data": "^0.58.2",
     "typescript": "^2.1.4"
   }
 }

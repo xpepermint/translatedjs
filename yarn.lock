@@ -1470,9 +1470,9 @@ http-signature@~1.1.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-icu4c-data@^0.57.2:
-  version "0.57.2"
-  resolved "https://registry.yarnpkg.com/icu4c-data/-/icu4c-data-0.57.2.tgz#a0fa43b47706ade67a5d3c0061e8ada4c58001bb"
+icu4c-data@^0.58.2:
+  version "0.58.2"
+  resolved "https://registry.yarnpkg.com/icu4c-data/-/icu4c-data-0.58.2.tgz#5a683ab5a7cd21f4f1a887a9d0841c298de3f02d"
 
 ignore-by-default@^1.0.0, ignore-by-default@^1.0.1:
   version "1.0.1"
