@@ -38,6 +38,7 @@ test('method `formatRelativeTime` should return relative time', (t) => {
 });
 
 test('method `formatMessage` should return formatted message', (t) => {
-  let i18n = new I18n({locale: 'sl-SI'});
+  let i18n = new I18n({locale: 'sl-SI', messages: {hello: 'Hello, {name}!'}});
   t.is(i18n.formatMessage('foo {bar}', {bar: 'bar'}), 'foo bar');
+  t.is(i18n.formatMessage('hello', {name: 'bar'}), 'Hello, bar!');
 });

@@ -31,5 +31,5 @@ export declare class I18n {
     formatDate(value: number | Date, options?: any): string;
     formatTime(value: number | Date, options?: any): string;
     formatRelativeTime(value: number, options?: any): any;
-    formatMessage(message: string, vars?: any): any;
+    formatMessage(key: string, vars?: any): any;
 }

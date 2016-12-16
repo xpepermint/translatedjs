@@ -95,7 +95,9 @@ export class I18n {
   * Returns formatted message.
   */
 
-  formatMessage (message: string, vars: any = {}) {
+  formatMessage (key: string, vars: any = {}) {
+    let message = this.messages[key] || key;
+
     return new MessageFormat(message, this.locale, this.formats).format(vars);
   }
 

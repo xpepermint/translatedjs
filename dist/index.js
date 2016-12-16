@@ -81,8 +81,9 @@ var I18n = (function () {
     /*
     * Returns formatted message.
     */
-    I18n.prototype.formatMessage = function (message, vars) {
+    I18n.prototype.formatMessage = function (key, vars) {
         if (vars === void 0) { vars = {}; }
+        var message = this.messages[key] || key;
         return new intl_messageformat_1["default"](message, this.locale, this.formats).format(vars);
     };
     return I18n;
