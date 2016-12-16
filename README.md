@@ -211,7 +211,7 @@ If you need to support old browsers with no support for [Intl](https://developer
 
 ### Node.js
 
-Node.js already supports [Intl](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Intl) out of the box but it comes with English support only. To support other languages download the latest [ICU data file](http://site.icu-project.org/download) and then run our scripts with the `--icu-data-dir` option.
+Node.js has the [Intl](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Intl) APIs built-in, but only includes the English locale data by default. To support other languages download the latest [ICU data file](http://site.icu-project.org/download) and then run our scripts with the `--icu-data-dir` option.
 
 The easiest way to get `ICU data` is by installing the [icu4c-data](https://www.npmjs.com/package/icu4c-data) package (`v0.58.2` or higher).
 
@@ -219,7 +219,7 @@ The easiest way to get `ICU data` is by installing the [icu4c-data](https://www.
 $ npm install —save icu4c-data
 ```
 
-Now you can run your scripts like this:
+Now you can run your scripts like this (`Node v7+`):
 
 ```js
 $ node --icu-data-dir=node_modules/icu4c-data index.js
