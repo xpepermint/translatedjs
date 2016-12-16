@@ -1,3 +1,5 @@
+![Build Status](https://travis-ci.org/xpepermint/translatedjs.svg?branch=master)&nbsp;[![NPM Version](https://badge.fury.io/js/typeable.svg)](https://badge.fury.io/js/typeable)&nbsp;[![Dependency Status](https://gemnasium.com/xpepermint/translatedjs.svg)](https://gemnasium.com/xpepermint/translatedjs)
+
 # translated.js
 
 > Internationalization (i18n) and localization (l10n) library.
@@ -35,7 +37,7 @@ let i18n = new I18n({
   }
 });
 
-i18n.formatMessage('Hello, {name}!', {name: 'John'}); // -> Hello, John!
+i18n.formatMessage('hello', {name: 'John'}); // -> Hello, John!
 i18n.formatNumber(1231, {format: 'decimal'}); // -> 1,231.00
 i18n.formatNumber(0.81, {format: 'percent'}); // -> 80 %
 i18n.formatNumber(1234, {format: 'currency'}); // -> 1,234.00 USD
@@ -44,6 +46,32 @@ i18n.formatRelativeTime(new Date()); // -> 1 month ago
 ```
 
 ## API
+
+**I18n({locale, messages, formats})**
+
+> Core class for internationalization and localization.
+
+| Name | Type | Required | Default | Description
+|------|------|----------|---------|------------
+| locale | String | No | en-US | Language culture [name](https://msdn.microsoft.com/en-us/library/ee825488).
+| messages | Object | No | {} | Object with translations.
+| formats | Object | No | {} | Object with custom formats.
+
+```js
+import {I18n} from 'translated';
+
+let i18n = new I18n({
+  locale: 'en-US',
+  messages: {
+    hello: 'Hello, {name}!'
+  },
+  formats : {
+    number: {}, // custom number formats for Intl.NumberFormat
+    date: {}, // custom date formats for Intl.DateTimeFormat
+    time: {} // custom time formats for Intl.DateTimeFormat
+  }
+});
+```
 
 **I18n.prototype.formatDate(value, options)**
 
