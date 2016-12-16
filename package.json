@@ -1,10 +1,21 @@
 {
   "name": "translated",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Internationalization (i18n) and localization (l10n) library",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "ava": {
+    "files": [
+      "./tests/*.js"
+    ],
+    "concurrency": 4,
+    "failFast": true
+  },
   "scripts": {
-    "test": "ava"
+    "clean": "rm -Rf ./dist",
+    "build": "npm run clean; tsc",
+    "prepublish": "npm run build",
+    "test": "npm run build; node --icu-data-dir=node_modules/icu4c-data node_modules/.bin/ava"
   },
   "repository": {
     "type": "git",
@@ -18,6 +29,7 @@
     "i18n",
     "l10n",
     "cldr",
+    "g11n",
     "translate",
     "translation",
     "translated",
@@ -42,5 +54,13 @@
     "globalized"
   ],
   "author": "Kristijan Sedlak (Xpepermint)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "intl-messageformat": "^1.3.0",
+    "lodash.merge": "^4.6.0"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "icu4c-data": "^0.57.2"
+  }
 }
